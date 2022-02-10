@@ -1,0 +1,1755 @@
+<style>
+    #materiasCursadas td,
+    tr {
+        text-align: center;
+    }
+</style>
+<h1 id="titulo">Alta de Alumno</h1>
+<form id="formulario">
+
+    <fieldset>
+        <legend>Informacion basica</legend>
+        <hr>
+        <br><br>
+        <table style="width: 100%;" class="table-active">
+            <tr>
+                <td> <label for="nombre" class="col-sm-2 col-form-label">Nombre</label> </td>
+                <td><input type="text" name="txtNombre" id="txtNombre" /></td>
+                <td><label for="apellidoP" class="col-sm-2 col-form-label">Apellido Paterno:</label> </td>
+                <td><input type="text" name="txtApellPa" id="txtApellPa" /></td>
+                <td><label for="apellidoM" class="col-sm-2 col-form-label">Apellido Materno:</label></td>
+                <td><input type="text" name="txtApellMa" id="txtApellMa" /></td>
+                <td></td>
+            </tr>
+        </table>
+        <br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos personales</legend>
+        <hr>
+        <table style="width: 100%;" class="table-active">
+            <tr>
+                <td>Sexo:</td>
+                <td>
+                    <select name="sexo" id="sexo">
+                        <option value="selecciona">Selecciona</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                </td>
+                <td>CURP:</td>
+                <td><input type="text" name="txtCurp" id="txtCurp" /></td>
+                <td>Fecha de nacimiento</td>
+                <td><input type="date" name="txtFechaNaci" id="txtFechaNaci" /></td>
+            </tr>
+            <tr>
+                <td>Nacionalidad:</td>
+                <td>
+                    <select name="nacionalidad" id="nacionalidad">
+                        <option value="selecciona">Selecciona</option>
+                        <option value="mexicano">Mexicano</option>
+                        <option value="extranjero">Extranjero</option>
+                    </select>
+                </td>
+                <br><br>
+
+            </tr>
+        </table>
+        <br>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos de contacto</legend>
+        <hr>
+        <br><br>
+        <table style="width: 100%;" class="table-active">
+            <tr>
+                <td>Telefono:</td>
+                <td><input type="tel" name="txtTelefono" id="txtTelefono" /></td>
+                <td>Correo:</td>
+                <td><input type="text" name="txtCorreo" id="txtCorreo" /></td>
+            </tr>
+        </table>
+        <br />
+        <br />
+    </fieldset>
+
+    <fieldset>
+        <legend>Domicilio</legend>
+        <br>
+        <br>
+        <table style="width: 100%;" class="table-active">
+            <tr>
+                <td>Calle:</td>
+                <td>
+                    <input type="text" name="txtCalle" id="txtCalle" />
+                </td>
+                <td>Num Int:</td>
+                <td>
+                    <input type="text" name="txtNumInt" id="txtNumInt" />
+
+                </td>
+                <td>Num Ext:</td>
+                <td>
+                    <input type="text" name="txtNumExt" id="txtNumExt" />
+
+                </td>
+                <td>Colonia:</td>
+                <td>
+                    <input type="text" name="txtColonia" id="txtColonia" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Municipio:</td>
+                <td>
+                    <input type="text" name="txtMunicipio" id="txtMunicipio" />
+                </td>
+                <td>Estado:</td>
+                <td>
+                    <select name="estado" id="estado">
+                        <option value="selecciona">Selecciona</option>
+                        <option value="Aguascalientes">Aguascalientes</option>
+                        <option value="Estado de Mexico">Estado de Mexico</option>
+                        <option value="Ciudad de Mexico">Ciudad de Mexico</option>
+                        <option value="">Zacatecas</option>
+                    </select>
+                </td>
+                <td>Codigo postal:</td>
+                <td>
+                    <input type="text" name="txtCp" id="txtCp" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos Escolares</legend>
+        <hr>
+        <br><br>
+        <table style="width: 100%;" class="table-active">
+            <tr>
+                <td>Matricula:</td>
+                <td>
+                    <input type="text" name="txtMatricula" id="txtMatricula" />
+                </td>
+
+                <td>Carrera: </td>
+                <td>
+                    <select name="txtCarrera" id="txtCarrera">
+                        <option value="selecciona">Selecciona</option>
+                        <option value="Informatica">Informatica</option>
+                        <option value="Bioquimica">Bioquimica</option>
+                        <option value="Mecatronica">Mecatronica</option>
+                        <option value="Gestion">Gestion</option>
+
+                    </select>
+                </td>
+                <td>Fecha de ingreso</td>
+                <td>
+                    <input type="date" name="txtFechaIng" id="txtFechaIng" />
+                </td>
+            </tr>
+            <tr>
+                <td>Semestre:</td>
+                <td>
+                    <select name="txtSemestre" id="txtSemestre">
+                        <option value="selecciona">Selecciona</option>
+                        <option value="1ro">1ro</option>
+                        <option value="2do">2do</option>
+                        <option value="3ro">3ro</option>
+                        <option value="4to">4to</option>
+                        <option value="5to">5to</option>
+                        <option value="6to">6to</option>
+                        <option value="7to">7to</option>
+                        <option value="8vo">8vo</option>
+                        <option value="9no">9no</option>
+
+                    </select>
+                </td>
+
+            </tr>
+        </table>
+        <br />
+        <br />
+    </fieldset>
+
+
+</form>
+
+<div id="div1">
+<hr>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="boton2"
+    onclick=" RegistrarConModal2()">Agregar Materias Cursando</button>
+
+<fieldset>
+    <legend>Materias Cursando</legend>
+    <br><br>
+    <table class="table-active" style="width: 100%;" id="materiasCursando">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Clave</th>
+                <th>Materia</th>
+                <th>Horario</th>
+                <th>1er Parcial</th>
+                <th>2do Parcial</th>
+                <th>3er Parcial</th>
+
+
+            </tr>
+
+        </thead>
+        <tbody class="table-active">
+
+        </tbody>
+
+
+    </table>
+    
+</fieldset>
+
+<br><br>
+</div>
+
+
+<div id="div2">
+    <hr>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="boton1"
+    onclick=" RegistrarConModal()">Agregar Materias Cursada</button>
+<fieldset>
+
+    <legend>Materias Cursadas</legend>
+    <br><br>
+    <table class="table-active" style="width: 100%;" id="materiasCursadas">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Clave</th>
+                <th>Materia</th>
+                <th>1er Parcial</th>
+                <th>2do Parcial</th>
+                <th>3er Parcial</th>
+                <th>Cailificacion Final</th>
+
+            </tr>
+
+        </thead>
+        <tbody class="table-active">
+
+        </tbody>
+
+
+    </table>
+
+</fieldset>
+
+<br>
+<br>
+</div>
+
+
+<button id="btnGuardar" onclick="Enviar()">Guardar</button>
+<button id="btnCerrar" onclick="window.location.href='/Estudiantes/Listado'">Cerrar</button>
+
+
+<br>
+<br>
+<br>
+<br><br>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Materia Cursada</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formModal1">
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">idEstudiante:</label>
+                        <input type="text" class="form-control" id="idEstudianteMatCda">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Clave Materia:</label>
+                        <input type="text" class="form-control" id="claveMatCda">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Nombre Materia:</label>
+                        <input type="text" class="form-control" id="materiaCda">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Calificacion 1er:</label>
+                        <input type="text" class="form-control" id="caliPrimerPMCda">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Calificacion 2do:</label>
+                        <input type="text" class="form-control" id="caliSegundoPMCda">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Calificacion 3ro:</label>
+                        <input type="text" class="form-control" id="caliTercerPMCda">
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="EnviardelModal1()"
+                    id="btnGuardar1">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br><br>
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Materia Cursando</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formModal2">
+                    <div class="mb-2">
+                        <label for="recipient-name" class="col-form-label">idEstudiante:</label>
+                        <input type="text" class="form-control" id="idEstudianteMatCndo">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="recipient-name" class="col-form-label">Clave Materia:</label>
+                        <input type="text" class="form-control" id="claveMatCdo">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="recipient-name" class="col-form-label">Nombre Materia:</label>
+                        <input type="text" class="form-control" id="materiaCdo">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="recipient-name" class="col-form-label">Horario:</label>
+                        <select name="horarioMat" id="horarioMat">
+                            <option value="selecciona">Selecciona</option>
+                            <option value="8-10">8-10</option>
+                            <option value="11-12">11-12</option>
+                            <option value="13-15">13-15</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="recipient-name" class="col-form-label">Calificacion 1er:</label>
+                        <input type="text" class="form-control" id="caliPrimerPMCdo">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="recipient-name" class="col-form-label">Calificacion 2do:</label>
+                        <input type="text" class="form-control" id="caliSegundoPMCdo">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="recipient-name" class="col-form-label">Calificacion 3ro:</label>
+                        <input type="text" class="form-control" id="caliTercerPMCdo">
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="EnviardelModal2()"
+                    id="btnGuardar2">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var accion = "";
+    var idEstudiante = 0;
+    var accion2 = 0;
+    var tabla;
+    var tbody;
+
+    var tabla1;
+    var tbody1;
+
+    var idmateriasCndo = 0;
+    var idmateriasCdas = 0;
+    // ESTA FUNCION SE EJECUTA AL CARGAR LA PAGINA POR COMPLETO
+    window.onload = function () {
+        //1 Inicio
+        //2 Obtner el path del url 
+        const path = window.location.pathname;
+        //3 Obtner la accion a realizar con la URL (REGISTRA O EDITAR  )      
+        const arreglopath = path.split("/");
+        const accionURL = arreglopath[2];
+        // 4 Si es Editar
+        if (accionURL.toUpperCase() == "EDITAR") {
+            //4.1 Resigtrar la accion EDITAR como variable global
+            accion = "EDITAR";
+            //4.2 Actualizar el titulo a Edicion de empleado
+            const titulo = document.getElementById("titulo");
+            titulo.innerHTML = 'Edicion de Estudiante';
+            const tituloModal = document.getElementById("exampleModalLabel");
+            //4.3 Cargar la informacion de empleado
+            bloqueo();
+            cargarEnpantalla();
+            console.log(accion);
+
+        }
+        //5 Si es registro
+        else if (accionURL.toUpperCase() == "REGISTRO") {
+            //5.1 Resigtrar la accion REGISTRO como variable global
+            accion = "REGISTRO";
+            //5.2 Actualizar el titulo a Edicion de empleado
+            bloqueo();
+            const titulo = document.getElementById("titulo");
+            titulo.innerHTML = 'Alta de Estudiante';
+            
+            tablaEliminar = document.getElementById("div1");
+            tablaEliminar.innerHTML = " ";
+            
+            tablaEliminar1 = document.getElementById("div2");
+            tablaEliminar1.innerHTML = " ";
+            
+            console.log(accion);
+
+        }
+        //6 Si es Consulta 
+        else if (accionURL.toUpperCase() == "CONSULTAR") {
+            accion = "CONSULTAR";
+            //5.2 Actualizar el titulo a Edicion de empleado
+            const titulo = document.getElementById("titulo");
+            titulo.innerHTML = 'Consulta de Estudiante';
+            console.log(accion);
+            cargarEnpantalla();
+            bloqueo();
+        }
+
+        else {
+
+            alert("Accion no Valida");
+
+        }
+
+
+    }
+
+    // FUNCION PARA DESHABILITAR LOS INPUTS y QUITAR EL BOTON
+
+    function bloqueo() {
+        if (accion == "CONSULTAR") {
+            //   var button = document.querySelector(".button");
+            //  button.disabled = true;
+            //document.getElementsByClassName("btn-primary").disabled = true;
+            tbody = document.getElementById("materiasCursando");
+
+            var rowCount = tbody.rows.length;
+            console.log(tbody);
+
+            console.log("tamaño de tabla " + rowCount);
+            /*for (var x=rowCount-1; x>0; x--) {
+               myTable.deleteRow(x);
+            }
+            */
+            document.getElementById("btnGuardar").style.display = 'none';
+            document.getElementById("boton1").disabled = true;
+            document.getElementById("boton2").disabled = true;
+
+            document.getElementById("txtNombre").disabled = true;
+            document.getElementById("txtApellPa").disabled = true;
+            document.getElementById("txtApellMa").disabled = true;
+            document.getElementById("sexo").disabled = true;
+            document.getElementById("txtCurp").disabled = true;
+            document.getElementById("txtTelefono").disabled = true;
+            document.getElementById("txtCorreo").disabled = true;
+            document.getElementById("txtFechaNaci").disabled = true;
+            document.getElementById("nacionalidad").disabled = true;
+
+
+            document.getElementById("txtCalle").disabled = true;
+            document.getElementById("txtNumExt").disabled = true;
+            document.getElementById("txtNumInt").disabled = true;
+            document.getElementById("txtColonia").disabled = true;
+            document.getElementById("txtMunicipio").disabled = true;
+            document.getElementById("estado").disabled = true;
+            document.getElementById("txtCp").disabled = true;
+
+            document.getElementById("txtFechaIng").disabled = true;
+            document.getElementById("txtMatricula").disabled = true;
+            document.getElementById("txtCarrera").disabled = true;
+            document.getElementById("txtSemestre").disabled = true;
+
+
+
+        }
+        else {
+
+            document.getElementById("btnGuardar").style.display = 'inline';
+
+
+            document.getElementById("boton1").disabled = false;
+            document.getElementById("boton2").disabled = false;
+
+
+            document.getElementById("txtNombre").disabled = false;
+            document.getElementById("txtApellPa").disabled = false;
+            document.getElementById("txtApellMa").disabled = false;
+            document.getElementById("sexo").disabled = false;
+            document.getElementById("txtCurp").disabled = false;
+            document.getElementById("txtTelefono").disabled = false;
+            document.getElementById("txtCorreo").disabled = false;
+            document.getElementById("txtFechaNaci").disabled = false;
+            document.getElementById("nacionalidad").disabled = false;
+
+
+            document.getElementById("txtCalle").disabled = false;
+            document.getElementById("txtNumExt").disabled = false;
+            document.getElementById("txtNumInt").disabled = false;
+            document.getElementById("txtColonia").disabled = false;
+            document.getElementById("txtMunicipio").disabled = false;
+            document.getElementById("estado").disabled = false;
+            document.getElementById("txtCp").disabled = false;
+
+            document.getElementById("txtFechaIng").disabled = false;
+            document.getElementById("txtMatricula").disabled = false;
+            document.getElementById("txtCarrera").disabled = false;
+            document.getElementById("txtSemestre").disabled = false;
+
+
+        }
+
+    }
+
+    //ESTA FUNCION SE USA EN EDITAR Y REGISTRAR
+
+    function obtenerPeticion() {
+
+        //1 Inicio
+        //2 Obtener los valores de los elemetos html y sus valores
+        const Nombre = document.getElementById("txtNombre").value;
+        const ApellidoPaterno = document.getElementById("txtApellPa").value;
+        const ApellidoMaterno = document.getElementById("txtApellMa").value;
+        const Sexo = document.getElementById("sexo").value;
+        const CURP = document.getElementById("txtCurp").value;
+        const FechaNaci = document.getElementById("txtFechaNaci").value;
+        const Nacionalidad = document.getElementById("nacionalidad").value;
+        const Telefono = document.getElementById("txtTelefono").value;
+        const Correo = document.getElementById("txtCorreo").value;
+
+        const Calle = document.getElementById("txtCalle").value;
+        const NumExt = document.getElementById("txtNumExt").value;
+        const NumInt = document.getElementById("txtNumInt").value;
+        const Colonia = document.getElementById("txtColonia").value;
+        const Municipio = document.getElementById("txtMunicipio").value;
+        const Estado = document.getElementById("estado").value;
+        const Cp = document.getElementById("txtCp").value;
+
+        const Matricula = document.getElementById("txtMatricula").value;
+        const Carrera = document.getElementById("txtCarrera").value;
+        const Semestre = document.getElementById("txtSemestre").value;
+        const FechaIng = document.getElementById("txtFechaIng").value;
+
+        //3       Crear la peticion JSON  
+        var raw = JSON.stringify({
+            "idEstudiante": idEstudiante,
+            "matricula": Matricula,
+            "carrera": Carrera,
+            "fechaIngreso": FechaIng,
+            "semestre": Semestre,
+            "activo": true,
+            "nombre": Nombre,
+            "apellidoPaterno": ApellidoPaterno,
+            "apellidoMaterno": ApellidoMaterno,
+            "sexo": Sexo,
+            "curp": CURP,
+            "telefono": Telefono,
+            "correo": Correo,
+            "fechaNacimiento": FechaNaci,
+            "nacionalidad": Nacionalidad,
+            "direccion": {
+                "calle": Calle,
+                "numeroExterior": NumExt,
+                "numeroInterior": NumInt,
+                "colonia": Colonia,
+                "municipio": Municipio,
+                "estado": Estado,
+                "codigoPostal": Cp
+            }
+        });
+
+        return raw;
+
+    }
+
+    function obtenerFecha(fecha) {
+        fecha = fecha.substring(0, 10);
+        return fecha;
+    }
+
+    //ESTA FUNCION SE USA CUANDO VAMOS A EDITAR y CONSULTAR
+    function cargarEnpantalla() {
+        //1 Iniciar
+
+        //2 Obtener id empleado
+        const path = window.location.pathname;
+        const arreglopath = path.split("/");
+        const idEstudianteURL = arreglopath[3];
+        console.log(idEstudianteURL);
+        idEstudiante = idEstudianteURL;
+        //  meter consulta para ver si el idEstudiante esta en la base de las materias
+
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        fetch("https://localhost:5003/Estudiantes/" + idEstudiante, requestOptions)
+            .then(response => response.json())
+            .then(estudiante => {
+                var materiasCndo = (estudiante.materiascursando);
+
+                var materiasCdas = (estudiante.materiascursadas);
+                console.log(estudiante);
+                console.log(materiasCndo);
+                console.log(materiasCdas);
+
+                if (materiasCndo == null && materiasCdas == null) {
+                 
+                    const Nombre = document.getElementById("txtNombre");
+                    const ApellidoPaterno = document.getElementById("txtApellPa");
+                    const ApellidoMaterno = document.getElementById("txtApellMa");
+                    const Sexo = document.getElementById("sexo");
+                    const CURP = document.getElementById("txtCurp");
+                    const idEstudianteMatCda = document.getElementById("idEstudianteMatCda");
+                    const clave = document.getElementById("claveMatCda");
+                    const materia = document.getElementById("materiaCda");
+                    const caliPrimerPMCda = document.getElementById("caliPrimerPMCda");
+                    const caliSegundoPMCda = document.getElementById("caliSegundoPMCda");
+                    const FechaNaci = document.getElementById("txtFechaNaci");
+                    const Nacionalidad = document.getElementById("nacionalidad");
+                    const Telefono = document.getElementById("txtTelefono");
+                    const Correo = document.getElementById("txtCorreo");
+
+                    const Calle = document.getElementById("txtCalle");
+                    const NumExt = document.getElementById("txtNumExt");
+                    const NumInt = document.getElementById("txtNumInt");
+                    const Colonia = document.getElementById("txtColonia");
+                    const Municipio = document.getElementById("txtMunicipio");
+                    const Estado = document.getElementById("estado");
+                    const Cp = document.getElementById("txtCp");
+
+                    const Matricula = document.getElementById("txtMatricula");
+                    const Carrera = document.getElementById("txtCarrera");
+                    const Semestre = document.getElementById("txtSemestre");
+                    const FechaIng = document.getElementById("txtFechaIng");
+
+                    //3.3 - Pintar las propiedades en los elementos html
+                    Nombre.value = estudiante.nombre;
+                    ApellidoPaterno.value = estudiante.apellidoPaterno;
+                    ApellidoMaterno.value = estudiante.apellidoMaterno;
+                    Sexo.value = estudiante.sexo;
+                    CURP.value = estudiante.curp;
+                    FechaNaci.value = obtenerFecha(estudiante.fechaNacimiento);
+                    Nacionalidad.value = estudiante.nacionalidad;
+                    Telefono.value = estudiante.telefono;
+                    Correo.value = estudiante.correo;
+
+                    Calle.value = estudiante.direccion.calle;
+                    NumExt.value = estudiante.direccion.numeroExterior;
+                    NumInt.value = estudiante.direccion.numeroInterior;
+                    Colonia.value = estudiante.direccion.colonia;
+                    Municipio.value = estudiante.direccion.municipio;
+                    Estado.value = estudiante.direccion.estado;
+                    Cp.value = estudiante.direccion.codigoPostal;
+
+                    Matricula.value = estudiante.matricula;
+                    FechaIng.value = obtenerFecha(estudiante.fechaIngreso);
+                    Carrera.value = estudiante.carrera;
+                    Semestre.value = estudiante.semestre;
+
+
+
+                }
+                else if (materiasCndo != null && materiasCdas == null) {
+
+                    //3.1 - Si el servicio me regreso el empleado, pintarlo en pantalla
+                    //3.2 - Obtner lo elementos html
+
+                    const Nombre = document.getElementById("txtNombre");
+                    const ApellidoPaterno = document.getElementById("txtApellPa");
+                    const ApellidoMaterno = document.getElementById("txtApellMa");
+                    const Sexo = document.getElementById("sexo");
+                    const CURP = document.getElementById("txtCurp");
+                    const FechaNaci = document.getElementById("txtFechaNaci");
+                    const Nacionalidad = document.getElementById("nacionalidad");
+                    const Telefono = document.getElementById("txtTelefono");
+                    const Correo = document.getElementById("txtCorreo");
+
+                    const Calle = document.getElementById("txtCalle");
+                    const NumExt = document.getElementById("txtNumExt");
+                    const NumInt = document.getElementById("txtNumInt");
+                    const Colonia = document.getElementById("txtColonia");
+                    const Municipio = document.getElementById("txtMunicipio");
+                    const Estado = document.getElementById("estado");
+                    const Cp = document.getElementById("txtCp");
+
+                    const Matricula = document.getElementById("txtMatricula");
+                    const Carrera = document.getElementById("txtCarrera");
+                    const Semestre = document.getElementById("txtSemestre");
+                    const FechaIng = document.getElementById("txtFechaIng");
+
+                    //3.3 - Pintar las propiedades en los elementos html
+                    Nombre.value = estudiante.nombre;
+                    ApellidoPaterno.value = estudiante.apellidoPaterno;
+                    ApellidoMaterno.value = estudiante.apellidoMaterno;
+                    Sexo.value = estudiante.sexo;
+                    CURP.value = estudiante.curp;
+                    FechaNaci.value = obtenerFecha(estudiante.fechaNacimiento);
+                    Nacionalidad.value = estudiante.nacionalidad;
+                    Telefono.value = estudiante.telefono;
+                    Correo.value = estudiante.correo;
+
+                    Calle.value = estudiante.direccion.calle;
+                    NumExt.value = estudiante.direccion.numeroExterior;
+                    NumInt.value = estudiante.direccion.numeroInterior;
+                    Colonia.value = estudiante.direccion.colonia;
+                    Municipio.value = estudiante.direccion.municipio;
+                    Estado.value = estudiante.direccion.estado;
+                    Cp.value = estudiante.direccion.codigoPostal;
+
+                    Matricula.value = estudiante.matricula;
+                    FechaIng.value = obtenerFecha(estudiante.fechaIngreso);
+                    Carrera.value = estudiante.carrera;
+                    Semestre.value = estudiante.semestre;
+
+                    // CARGAR MATERIAS CURSANDO EN LA TABLA
+                    const materiasCndo = Object.values(estudiante.materiascursando);
+                    tabla = document.getElementById("materiasCursando");
+                    tbody = tabla.querySelector("tbody");
+                    console.log(tbody);
+
+
+                    for (let i = 0; i < materiasCndo.length; i++) {
+                        idmateriasCndo = materiasCndo[i].idMateriaCursando;
+                        console.log(idmateriasCndo);
+                        const tr = document.createElement("tr");
+                        tbody.appendChild(tr);
+                        console.log(materiasCndo);
+
+                        var td = null;
+                        var a = null;
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].idMateriaCursando;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].clave;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].materia;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].horario;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].caliPrimerP;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].caliSegundoP;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].caliTercerP;
+                        tr.appendChild(td);
+
+
+                        if (accion != "CONSULTAR") {
+                            
+                            //editar
+                            td = document.createElement("td");
+                            a = document.createElement("a");
+                            a.textContent = "Editar";
+                            a.innerHTML = '<button type=\"button\" class=\"btn btn-primary\"  data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal2\" onclick=\"EditarConModal2(' + materiasCndo[i].idMateriaCursando + ')\">Editar</button>';
+                            td.appendChild(a);
+                            tr.appendChild(td);
+
+                            //eliminar
+                            td = document.createElement("td");
+                            a = document.createElement("a");
+                            a.innerHTML = '<button type=\"button\" class=\"btn btn-primary\" onclick=\"EliminarConModal2(' + materiasCndo[i].idMateriaCursando + ')\">Eliminar</button>';
+                            td.appendChild(a);
+                            tr.appendChild(td);
+
+                        }
+
+
+
+                    }
+                    // FIN DE CARGAR MATERIAS CURSANDO
+
+                }//////
+                else if (materiasCndo == null && materiasCdas != null) {
+
+                    //3.1 - Si el servicio me regreso el empleado, pintarlo en pantalla
+                    //3.2 - Obtner lo elementos html
+
+                    const Nombre = document.getElementById("txtNombre");
+                    const ApellidoPaterno = document.getElementById("txtApellPa");
+                    const ApellidoMaterno = document.getElementById("txtApellMa");
+                    const Sexo = document.getElementById("sexo");
+                    const CURP = document.getElementById("txtCurp");
+                    const FechaNaci = document.getElementById("txtFechaNaci");
+                    const Nacionalidad = document.getElementById("nacionalidad");
+                    const Telefono = document.getElementById("txtTelefono");
+                    const Correo = document.getElementById("txtCorreo");
+
+                    const Calle = document.getElementById("txtCalle");
+                    const NumExt = document.getElementById("txtNumExt");
+                    const NumInt = document.getElementById("txtNumInt");
+                    const Colonia = document.getElementById("txtColonia");
+                    const Municipio = document.getElementById("txtMunicipio");
+                    const Estado = document.getElementById("estado");
+                    const Cp = document.getElementById("txtCp");
+
+                    const Matricula = document.getElementById("txtMatricula");
+                    const Carrera = document.getElementById("txtCarrera");
+                    const Semestre = document.getElementById("txtSemestre");
+                    const FechaIng = document.getElementById("txtFechaIng");
+
+                    //3.3 - Pintar las propiedades en los elementos html
+                    Nombre.value = estudiante.nombre;
+                    ApellidoPaterno.value = estudiante.apellidoPaterno;
+                    ApellidoMaterno.value = estudiante.apellidoMaterno;
+                    Sexo.value = estudiante.sexo;
+                    CURP.value = estudiante.curp;
+                    FechaNaci.value = obtenerFecha(estudiante.fechaNacimiento);
+                    Nacionalidad.value = estudiante.nacionalidad;
+                    Telefono.value = estudiante.telefono;
+                    Correo.value = estudiante.correo;
+
+                    Calle.value = estudiante.direccion.calle;
+                    NumExt.value = estudiante.direccion.numeroExterior;
+                    NumInt.value = estudiante.direccion.numeroInterior;
+                    Colonia.value = estudiante.direccion.colonia;
+                    Municipio.value = estudiante.direccion.municipio;
+                    Estado.value = estudiante.direccion.estado;
+                    Cp.value = estudiante.direccion.codigoPostal;
+
+                    Matricula.value = estudiante.matricula;
+                    FechaIng.value = obtenerFecha(estudiante.fechaIngreso);
+                    Carrera.value = estudiante.carrera;
+                    Semestre.value = estudiante.semestre;
+
+                    // CARGAR MATERIAS CURSADAS EN LA TABLA
+                    const materiasCdas = Object.values(estudiante.materiascursadas);
+                    tabla1 = document.getElementById("materiasCursadas");
+                    tbody1 = tabla1.querySelector("tbody");
+                    console.log(tbody1);
+
+                    for (let i = 0; i < materiasCdas.length; i++) {
+
+                        idmateriasCdas = materiasCdas[i].idMateriaCursada;
+                        console.log(idmateriasCdas);
+
+                        const tr = document.createElement("tr");
+                        tbody1.appendChild(tr);
+                        //console.log(result[1]); 
+                        //console.log(tabla);
+                        console.log(materiasCdas);
+
+                        var td = null;
+                        var a = null;
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].idMateriaCursada;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].clave;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].materia;
+                        tr.appendChild(td);
+
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].caliPrimerP;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].caliSegundoP;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].caliTercerP;
+                        tr.appendChild(td);
+                        //console.log(tabla);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].caliFinal;
+                        tr.appendChild(td);
+
+                        if (accion != "CONSULTAR") {
+                       
+                            //editar
+                            td = document.createElement("td");
+                            a = document.createElement("a");
+                            a.textContent = "Editar";
+                            a.innerHTML = '<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\" onclick=\"EditarConModal(' + materiasCdas[i].idMateriaCursada + ')\">Editar</button>';
+                            td.appendChild(a);
+                            tr.appendChild(td);
+
+                            //eliminar
+                            td = document.createElement("td");
+                            a = document.createElement("a");
+                            a.innerHTML = '<button type=\"button\" class=\"btn btn-primary\"  onclick=\"EliminarConModal1(' + materiasCdas[i].idMateriaCursada + ')\">Eliminar</button>';
+                            td.appendChild(a);
+                            tr.appendChild(td);
+                        }
+
+                    }
+                }
+                /////////////////////
+
+                else if (materiasCndo != null && materiasCdas != null) {
+
+                    //3.1 - Si el servicio me regreso el empleado, pintarlo en pantalla
+                    //3.2 - Obtner lo elementos html
+
+                    const Nombre = document.getElementById("txtNombre");
+                    const ApellidoPaterno = document.getElementById("txtApellPa");
+                    const ApellidoMaterno = document.getElementById("txtApellMa");
+                    const Sexo = document.getElementById("sexo");
+                    const CURP = document.getElementById("txtCurp");
+                    const FechaNaci = document.getElementById("txtFechaNaci");
+                    const Nacionalidad = document.getElementById("nacionalidad");
+                    const Telefono = document.getElementById("txtTelefono");
+                    const Correo = document.getElementById("txtCorreo");
+
+                    const Calle = document.getElementById("txtCalle");
+                    const NumExt = document.getElementById("txtNumExt");
+                    const NumInt = document.getElementById("txtNumInt");
+                    const Colonia = document.getElementById("txtColonia");
+                    const Municipio = document.getElementById("txtMunicipio");
+                    const Estado = document.getElementById("estado");
+                    const Cp = document.getElementById("txtCp");
+
+                    const Matricula = document.getElementById("txtMatricula");
+                    const Carrera = document.getElementById("txtCarrera");
+                    const Semestre = document.getElementById("txtSemestre");
+                    const FechaIng = document.getElementById("txtFechaIng");
+
+                    //3.3 - Pintar las propiedades en los elementos html
+                    Nombre.value = estudiante.nombre;
+                    ApellidoPaterno.value = estudiante.apellidoPaterno;
+                    ApellidoMaterno.value = estudiante.apellidoMaterno;
+                    Sexo.value = estudiante.sexo;
+                    CURP.value = estudiante.curp;
+                    FechaNaci.value = obtenerFecha(estudiante.fechaNacimiento);
+                    Nacionalidad.value = estudiante.nacionalidad;
+                    Telefono.value = estudiante.telefono;
+                    Correo.value = estudiante.correo;
+
+                    Calle.value = estudiante.direccion.calle;
+                    NumExt.value = estudiante.direccion.numeroExterior;
+                    NumInt.value = estudiante.direccion.numeroInterior;
+                    Colonia.value = estudiante.direccion.colonia;
+                    Municipio.value = estudiante.direccion.municipio;
+                    Estado.value = estudiante.direccion.estado;
+                    Cp.value = estudiante.direccion.codigoPostal;
+
+                    Matricula.value = estudiante.matricula;
+                    FechaIng.value = obtenerFecha(estudiante.fechaIngreso);
+                    Carrera.value = estudiante.carrera;
+                    Semestre.value = estudiante.semestre;
+
+                    // CARGAR MATERIAS CURSANDO EN LA TABLA
+                    const materiasCndo = Object.values(estudiante.materiascursando);
+                    tabla = document.getElementById("materiasCursando");
+                    tbody = tabla.querySelector("tbody");
+                    console.log(tbody);
+
+
+                    for (let i = 0; i < materiasCndo.length; i++) {
+                        idmateriasCndo = materiasCndo[i].idMateriaCursando;
+                        console.log(idmateriasCndo);
+                        const tr = document.createElement("tr");
+                        tbody.appendChild(tr);
+                        console.log(materiasCndo);
+
+                        var td = null;
+                        var a = null;
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].idMateriaCursando;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].clave;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].materia;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].horario;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].caliPrimerP;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].caliSegundoP;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCndo[i].caliTercerP;
+                        tr.appendChild(td);
+
+                        if (accion != "CONSULTAR") {
+                          
+                            //editar
+                            td = document.createElement("td");
+                            a = document.createElement("a");
+                            a.textContent = "Editar";
+                            a.innerHTML = '<button type=\"button\" class=\"btn btn-primary\"  data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal2\" onclick=\"EditarConModal2(' + materiasCndo[i].idMateriaCursando + ')\">Editar</button>';
+                            td.appendChild(a);
+                            tr.appendChild(td);
+
+                            //eliminar
+                            td = document.createElement("td");
+                            a = document.createElement("a");
+                            a.innerHTML = '<button type=\"button\" class=\"btn btn-primary\" onclick=\"EliminarConModal2(' + materiasCndo[i].idMateriaCursando + ')\">Eliminar</button>';
+                            td.appendChild(a);
+                            tr.appendChild(td);
+                        }
+
+
+
+                    }
+                    // FIN DE CARGAR MATERIAS CURSANDO
+
+
+                    // CARGAR MATERIAS CURSADAS EN LA TABLA
+                    const materiasCdas = Object.values(estudiante.materiascursadas);
+                    tabla1 = document.getElementById("materiasCursadas");
+                    tbody1 = tabla1.querySelector("tbody");
+                    console.log(tbody1);
+
+                    for (let i = 0; i < materiasCdas.length; i++) {
+
+                        idmateriasCdas = materiasCdas[i].idMateriaCursada;
+                        console.log(idmateriasCdas);
+
+                        const tr = document.createElement("tr");
+                        tbody1.appendChild(tr);
+                        //console.log(result[1]); 
+                        //console.log(tabla);
+                        console.log(materiasCdas);
+
+                        var td = null;
+                        var a = null;
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].idMateriaCursada;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].clave;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].materia;
+                        tr.appendChild(td);
+
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].caliPrimerP;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].caliSegundoP;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].caliTercerP;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = materiasCdas[i].caliFinal;
+                        tr.appendChild(td);
+
+
+                        if (accion != "CONSULTAR") {
+
+
+                            //editar
+                            td = document.createElement("td");
+                            a = document.createElement("a");
+                            a.textContent = "Editar";
+                            a.innerHTML = '<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\" onclick=\"EditarConModal(' + materiasCdas[i].idMateriaCursada + ')\">Editar</button>';
+                            td.appendChild(a);
+                            tr.appendChild(td);
+
+                            //eliminar
+                            td = document.createElement("td");
+                            a = document.createElement("a");
+                            a.innerHTML = '<button type=\"button\" class=\"btn btn-primary\"  onclick=\"EliminarConModal1(' + materiasCdas[i].idMateriaCursada + ')\">Eliminar</button>';
+                            td.appendChild(a);
+                            tr.appendChild(td);
+                        }
+
+                    }
+                }
+                //////////////////////////////////////
+
+            })
+            .catch(error => console.log('error', error));
+
+        //3- Consumir el  servicio de obtener empleado por id
+
+    }
+
+
+
+    //Funcion Enviar el Estudiante 
+    function Enviar() {
+
+        //1 Inicio
+        // 2 Obtner la accion por medio de la URL guardada en una varianble
+        // Global
+
+        if (accion == "EDITAR") {
+
+            //3 Si es Editar
+            //3.1 Obtener la peticion a traves del metodo obtnerPeticion
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            raw = obtenerPeticion();
+            console.log(raw);
+            //3.2 Declarar la Opciones de Peticion
+            var requestOptions = {
+                method: 'PUT',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+
+            fetch("https://localhost:5003/Estudiantes", requestOptions)
+                .then(response => {
+                    if (response.status == 200) {
+                        //3.3 Si se guardo correctament envia mensaje positivo de eso
+                        alert("Los datos se guardaron correctamente");
+                        const form = document.getElementById("formulario");
+                        form.reset();
+                    }
+
+                    else {
+                        //3.4 Si no se mandaron mostrar mensaje de error
+                        alert("Los datos no se guardaron correctamente, contacte al admin");
+                        console.log("Los datos no se guardaron correctamente", response);
+                    }
+
+                })
+                .catch(error => {
+                    //3.5 Si hubo otro error mandar mensaje
+                    alert("NO se pudo realizar la accion, contacte al admin");
+                    console.log("No se pudo realizar la accion", response)
+
+                });
+
+
+        }
+
+        else if (accion == "REGISTRO") {
+            //4 Si es REGISTRO
+            //5.1 Obtener la peticion a traves del metodo obtnerPeticion
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            raw = obtenerPeticion();
+            //5.2 Declarar la Opciones de Peticion
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            fetch("https://localhost:5003/Estudiantes", requestOptions)
+                .then(response => {
+                    if (response.status == 200) {
+                        //5.3 Si se guardo correctament envia mensaje positivo de eso
+                        alert("Los datos se guardaron correctamente");
+
+                        const form = document.getElementById("formulario");
+                        form.reset();
+
+                    }
+                    else {
+                        //5.4 Si no se mandaron mostrar mensaje de error
+                        alert("Los datos no se guardaron correctamente, contacte al admin");
+                        console.log("Los datos no se guardaron correctamente", response);
+                    }
+
+                })
+                .catch(error => {
+                    //5.5 Si hubo otro error mandar mensaje
+                    alert("NO se pudo realizar la accion, contacte al admin");
+                    console.log("No se pudo realizar la accion", response)
+
+                });
+
+
+        }
+
+
+    }
+
+
+    /// Funciones de Editar Boton Modal 1 MAterias Cursadas
+    function EditarConModal(id) {
+
+        console.log("id de modal  a eliminar " + id);
+        idmateriasCdas = id;
+        cargarModal1Editar(id);
+        accion2 = "EDITAR";
+
+
+        // cargarModal1Editar(accion2);
+
+    }
+
+    /// Funciones Registrar Boton de Modal 1
+    function RegistrarConModal() {
+
+        accion2 = "REGISTRO";
+        const idEstudianteMatCda = document.getElementById("idEstudianteMatCda");
+        idEstudianteMatCda.value = idEstudiante;
+        document.getElementById("idEstudianteMatCda").disabled = true;
+    }
+
+    function EliminarConModal1(idEliminar) {
+        console.log("id de modal  a eliminar " + idEliminar);
+
+        let eliminar = confirm("Seguro que desea eliminar el Materia Cursada?");
+
+        if (eliminar) {
+
+            var requestOptions = {
+                method: 'DELETE',
+                redirect: 'follow'
+            };
+
+
+
+            fetch("https://localhost:5003/MateriasCursadas/" + idEliminar, requestOptions)
+                .then(response => response.text())
+                .then(result => {
+                    console.log(result)
+                    console.log("Materia eliminada correctamente")
+
+                    tabla1.removeChild(tbody1);
+
+                    tbody1 = document.createElement("tbody");
+
+                    tabla1.appendChild(tbody1);
+
+
+                    tabla.removeChild(tbody);
+
+                    tbody = document.createElement("tbody");
+
+                    tabla.appendChild(tbody);
+
+                    cargarEnpantalla();
+
+                })
+                .catch(error => {
+                    console.log('error', error)
+                    alert("Hubo un error al eliminar, contacte al administrador");
+                });
+
+        }
+
+    }
+
+    function EnviardelModal1() {
+
+        if (accion2 == "EDITAR") {
+
+            //3 Si es Editar
+            //3.1 Obtener la peticion a traves del metodo obtnerPeticion
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            raw = obtenerPeticionModal1();
+            console.log(raw);
+            //3.2 Declarar la Opciones de Peticion
+            var requestOptions = {
+                method: 'PUT',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+
+            fetch("https://localhost:5003/MateriasCursadas", requestOptions)
+                .then(response => {
+                    if (response.status == 200) {
+                        //3.3 Si se guardo correctament envia mensaje positivo de eso
+                        alert("Los datos se guardaron correctamente");
+                        const formModal1 = document.getElementById("formModal1");
+                        formModal1.reset();
+
+                        tabla1.removeChild(tbody1);
+
+                        tbody1 = document.createElement("tbody");
+
+                        tabla1.appendChild(tbody1);
+
+
+                        tabla.removeChild(tbody);
+
+                        tbody = document.createElement("tbody");
+
+                        tabla.appendChild(tbody);
+
+                        cargarEnpantalla();
+                    }
+
+                    else {
+                        //3.4 Si no se mandaron mostrar mensaje de error
+                        alert("Los datos no se guardaron correctamente, contacte al admin");
+                        console.log("Los datos no se guardaron correctamente", response);
+                    }
+
+                })
+                .catch(error => {
+                    //3.5 Si hubo otro error mandar mensaje
+                    alert("NO se pudo realizar la accion, contacte al admin");
+                    console.log("No se pudo realizar la accion", response)
+
+                });
+
+
+        }
+        else if (accion2 == "REGISTRO") {
+            //4 Si es REGISTRO
+            //5.1 Obtener la peticion a traves del metodo obtnerPeticion
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            raw = obtenerPeticionModal1();
+            //5.2 Declarar la Opciones de Peticion
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            fetch("https://localhost:5003/MateriasCursadas", requestOptions)
+                .then(response => {
+                    if (response.status == 200) {
+                        //5.3 Si se guardo correctament envia mensaje positivo de eso
+                        alert("Los datos se guardaron correctamente");
+
+                        const formModal1 = document.getElementById("formModal1");
+                        formModal1.reset();
+
+                        tabla1.removeChild(tbody1);
+
+                        tbody1 = document.createElement("tbody");
+
+                        tabla1.appendChild(tbody1);
+
+
+                        tabla.removeChild(tbody);
+
+                        tbody = document.createElement("tbody");
+
+                        tabla.appendChild(tbody);
+
+                        cargarEnpantalla();
+
+                    }
+                    else {
+                        //5.4 Si no se mandaron mostrar mensaje de error
+                        alert("Los datos no se guardaron correctamente, contacte al admin");
+                        console.log("Los datos no se guardaron correctamente", response);
+                    }
+
+                })
+                .catch(error => {
+                    //5.5 Si hubo otro error mandar mensaje
+                    alert("NO se pudo realizar la accion, contacte al admin");
+                    console.log("No se pudo realizar la accion", response)
+
+                });
+
+
+        }
+
+    }
+
+
+    function cargarModal1Editar(idmateriasCdas) {
+        //1 Iniciar
+
+        //2 Obtener id empleado
+
+        //  meter consulta para ver si el idEstudiante esta en la base de las materias
+
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        fetch("https://localhost:5003/MateriasCursadas/" + idmateriasCdas, requestOptions)
+            .then(response => response.json())
+            .then(materiaCursada => {
+
+
+                const idEstudianteMatCda = document.getElementById("idEstudianteMatCda");
+                const clave = document.getElementById("claveMatCda");
+                const materia = document.getElementById("materiaCda");
+                const caliPrimerPMCda = document.getElementById("caliPrimerPMCda");
+                const caliSegundoPMCda = document.getElementById("caliSegundoPMCda");
+                const caliTercerPMCda = document.getElementById("caliTercerPMCda");
+
+                //3.3 - Pintar las propiedades en los elementos html
+                idEstudianteMatCda.value = materiaCursada.idEstudiante;
+                clave.value = materiaCursada.clave;
+                materia.value = materiaCursada.materia;
+                caliPrimerPMCda.value = materiaCursada.caliPrimerP;
+                caliSegundoPMCda.value = materiaCursada.caliSegundoP;
+                caliTercerPMCda.value = materiaCursada.caliTercerP;
+
+
+
+
+            })
+            .catch(error => console.log('error', error));
+
+        //3- Consumir el  servicio de obtener empleado por id
+
+    }
+
+    function obtenerPeticionModal1() {
+
+        //1 Inicio
+        //2 Obtener los valores de los elemetos html y sus valores
+        const idEstudianteMatCda = document.getElementById("idEstudianteMatCda").value;
+        const clave = document.getElementById("claveMatCda").value;
+        const materia = document.getElementById("materiaCda").value;
+        const caliPrimerPMCda = document.getElementById("caliPrimerPMCda").value;
+        const caliSegundoPMCda = document.getElementById("caliSegundoPMCda").value;
+        const caliTercerPMCda = document.getElementById("caliTercerPMCda").value;
+
+
+        //3       Crear la peticion JSON  
+        var raw = JSON.stringify({
+            "idMateriaCursada": idmateriasCdas,
+            "idEstudiante": idEstudianteMatCda,
+            "clave": clave,
+            "materia": materia,
+            "caliPrimerP": caliPrimerPMCda,
+            "caliSegundoP": caliSegundoPMCda,
+            "caliTercerP": caliTercerPMCda,
+            "caliFinal": 0,
+            "activo": true
+        });
+
+        return raw;
+
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+
+    /// Funciones de Editar Boton Modal 2 MAterias Cursando
+    function EditarConModal2(id) {
+
+        console.log("id de modal  a editar " + id);
+        idmateriasCndo = id;
+        cargarModal2Editar(id);
+        accion2 = "EDITAR";
+        // cargarModal1Editar(accion2);
+
+    }
+
+    /// Funciones Registrar Boton de Modal 2 Materias Cursando
+    function RegistrarConModal2() {
+
+        accion2 = "REGISTRO";
+        const idEstudianteMatCndo = document.getElementById("idEstudianteMatCndo");
+        idEstudianteMatCndo.value = idEstudiante;
+        document.getElementById("idEstudianteMatCndo").disabled = true;
+
+
+
+    }
+
+    function EliminarConModal2(idEliminar) {
+        console.log("id de modal  a eliminar " + idEliminar);
+
+        let eliminar = confirm("Seguro que desea eliminar el Materia Cursada?");
+
+        if (eliminar) {
+
+            var requestOptions = {
+                method: 'DELETE',
+                redirect: 'follow'
+            };
+
+
+
+            fetch("https://localhost:5003/MateriasCursando/" + idEliminar, requestOptions)
+                .then(response => response.text())
+                .then(result => {
+                    console.log(result);
+                    console.log("Materia eliminada correctamente");
+
+                    tabla1.removeChild(tbody1);
+
+                    tbody1 = document.createElement("tbody");
+
+                    tabla1.appendChild(tbody1);
+
+
+                    tabla.removeChild(tbody);
+
+                    tbody = document.createElement("tbody");
+
+                    tabla.appendChild(tbody);
+
+                    cargarEnpantalla();
+                })
+                .catch(error => {
+                    console.log('error', error)
+                    alert("Hubo un error al eliminar, contacte al administrador");
+                });
+
+        }
+
+    }
+
+    function EnviardelModal2() {
+
+        if (accion2 == "EDITAR") {
+
+            //3 Si es Editar
+            //3.1 Obtener la peticion a traves del metodo obtnerPeticion
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            raw = obtenerPeticionModal2();
+            console.log(raw);
+            //3.2 Declarar la Opciones de Peticion
+            var requestOptions = {
+                method: 'PUT',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+
+            fetch("https://localhost:5003/MateriasCursando", requestOptions)
+                .then(response => {
+                    if (response.status == 200) {
+                        //3.3 Si se guardo correctament envia mensaje positivo de eso
+                        alert("Los datos se guardaron correctamente");
+                        const formModal2 = document.getElementById("formModal2");
+                        formModal2.reset();
+
+                        tabla1.removeChild(tbody1);
+
+                        tbody1 = document.createElement("tbody");
+
+                        tabla1.appendChild(tbody1);
+
+
+                        tabla.removeChild(tbody);
+
+                        tbody = document.createElement("tbody");
+
+                        tabla.appendChild(tbody);
+
+                        cargarEnpantalla();
+                    }
+
+                    else {
+                        //3.4 Si no se mandaron mostrar mensaje de error
+                        alert("Los datos no se guardaron correctamente, contacte al admin");
+                        console.log("Los datos no se guardaron correctamente", response);
+                    }
+
+                })
+                .catch(error => {
+                    //3.5 Si hubo otro error mandar mensaje
+                    alert("NO se pudo realizar la accion, contacte al admin");
+                    console.log("No se pudo realizar la accion", response)
+
+                });
+
+
+        }
+        else if (accion2 == "REGISTRO") {
+            //4 Si es REGISTRO
+            //5.1 Obtener la peticion a traves del metodo obtnerPeticion
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            raw = obtenerPeticionModal2();
+            //5.2 Declarar la Opciones de Peticion
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            fetch("https://localhost:5003/MateriasCursando", requestOptions)
+                .then(response => {
+                    if (response.status == 200) {
+                        //5.3 Si se guardo correctament envia mensaje positivo de eso
+                        alert("Los datos se guardaron correctamente");
+
+                        const formModal2 = document.getElementById("formModal2");
+
+                        formModal2.reset();
+
+                        tabla1.removeChild(tbody1);
+
+                        tbody1 = document.createElement("tbody");
+
+                        tabla1.appendChild(tbody1);
+
+
+                        tabla.removeChild(tbody);
+
+                        tbody = document.createElement("tbody");
+
+                        tabla.appendChild(tbody);
+
+                    }
+                    else {
+                        //5.4 Si no se mandaron mostrar mensaje de error
+                        alert("Los datos no se guardaron correctamente, contacte al admin");
+                        console.log("Los datos no se guardaron correctamente", response);
+                    }
+
+                })
+                .catch(error => {
+                    //5.5 Si hubo otro error mandar mensaje
+                    alert("NO se pudo realizar la accion, contacte al admin");
+                    console.log("No se pudo realizar la accion", response)
+
+                });
+
+
+        }
+
+    }
+
+
+    function cargarModal2Editar(idmateriasCndo) {
+        //1 Iniciar
+
+        //2 Obtener id empleado
+
+        //  meter consulta para ver si el idEstudiante esta en la base de las materias
+
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        fetch("https://localhost:5003/MateriasCursando/" + idmateriasCndo, requestOptions)
+            .then(response => response.json())
+            .then(materiaCursando => {
+
+                console.log(accion2);
+
+                const idEstudianteMatCndo = document.getElementById("idEstudianteMatCndo");
+                const claveMatCdo = document.getElementById("claveMatCdo");
+                const materiaCdo = document.getElementById("materiaCdo");
+                const horario = document.getElementById("horarioMat");
+                const caliPrimerPMCdo = document.getElementById("caliPrimerPMCdo");
+                const caliSegundoPMCdo = document.getElementById("caliSegundoPMCdo");
+                const caliTercerPMCdo = document.getElementById("caliTercerPMCdo");
+
+                //3.3 - Pintar las propiedades en los elementos html
+                idEstudianteMatCndo.value = materiaCursando.idEstudiante;
+                claveMatCdo.value = materiaCursando.clave;
+                materiaCdo.value = materiaCursando.materia;
+                horario.value = materiaCursando.horario;
+                caliPrimerPMCdo.value = materiaCursando.caliPrimerP;
+                caliSegundoPMCdo.value = materiaCursando.caliSegundoP;
+                caliTercerPMCdo.value = materiaCursando.caliTercerP;
+
+            })
+            .catch(error => console.log('error', error));
+
+        //3- Consumir el  servicio de obtener empleado por id
+
+    }
+
+    function obtenerPeticionModal2() {
+
+        //1 Inicio
+        //2 Obtener los valores de los elemetos html y sus valores
+        const idEstudianteMatCndo = document.getElementById("idEstudianteMatCndo").value;
+        const claveMatCdo = document.getElementById("claveMatCdo").value;
+        const materiaCdo = document.getElementById("materiaCdo").value;
+        const horario = document.getElementById("horarioMat").value;
+        const caliPrimerPMCdo = document.getElementById("caliPrimerPMCdo").value;
+        const caliSegundoPMCdo = document.getElementById("caliSegundoPMCdo").value;
+        const caliTercerPMCdo = document.getElementById("caliTercerPMCdo").value;
+
+
+        //3       Crear la peticion JSON  
+        var raw = JSON.stringify({
+            "idMateriaCursando": idmateriasCndo,
+            "idEstudiante": idEstudianteMatCndo,
+            "clave": claveMatCdo,
+            "materia": materiaCdo,
+            "horario": horario,
+            "caliPrimerP": caliPrimerPMCdo,
+            "caliSegundoP": caliSegundoPMCdo,
+            "caliTercerP": caliTercerPMCdo,
+            "activo": true
+        });
+
+        return raw;
+
+    }
+
+
+
+
+
+
+</script>

@@ -1,0 +1,181 @@
+<html>
+
+<head>
+    <title>Empelado - Listado</title>
+</head>
+
+<body onload="cargarListado()">
+<br>
+<br>
+    <div>
+
+       <h1>Listado de Alumnos</h1>
+        <br>
+        <a href="/Estudiantes/Registro">Agregar Alumno</a>
+        <br>
+        <hr>
+        <table style="width:100%" id="tbEstudiantes" class="table-active">
+            <thead>
+                <tr>
+                    <th>ID Estudiante</th>
+                    <th>Matricula</th>
+                    <th>Nombre</th>
+                    <th>Carrera</th>
+                    <th>Correo Electronico</th>
+                    <th>Detalles</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+     <script>
+
+var tbody;
+var tr;
+var tabla;
+        function iniciarPagina(){
+            cargarListado();
+        }
+
+        function cargarListado() {
+
+            var requestOptions = {
+                method: 'GET',
+                redirect: 'follow'
+            };
+
+            fetch("https://localhost:5003/Estudiantes", requestOptions)
+                .then(response => response.json())
+                .then(estudiante => {
+
+                     tabla = document.getElementById("tbEstudiantes");
+                    
+                     tbody = tabla.querySelector("tbody");
+                    console.log(tbody);
+
+                    for (let i = 0; i < estudiante.length; i++) {
+
+                        tr = document.createElement("tr");
+                        tbody.appendChild(tr);
+                        //console.log(result[1]); 
+                        //console.log(tabla);
+                        console.log(estudiante);
+
+                        var td = null;
+                        var a = null;
+
+                        td = document.createElement("td");
+                        td.textContent = estudiante[i].idEstudiante;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = estudiante[i].matricula;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = estudiante[i].nombre + " " + estudiante[i].apellidoPaterno + " " + estudiante[i].apellidoMaterno;
+                        tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = estudiante[i].carrera;
+                        tr.appendChild(td);
+
+                  //      td = document.createElement("td");
+                     //   td.textContent = estudiante[i].telefono;
+                      //  tr.appendChild(td);
+
+                        td = document.createElement("td");
+                        td.textContent = estudiante[i].correo;
+                        tr.appendChild(td);
+
+                        //console.log(tabla);
+
+
+                        //Cosultar
+                        td = document.createElement("td");
+                        a = document.createElement("a");
+                        a.href = "/Estudiantes/Consultar/" + estudiante[i].idEstudiante;
+                        a.textContent = "Consultar";
+                        td.appendChild(a);
+                        tr.appendChild(td);
+
+                        //editar
+                        td = document.createElement("td");
+                        a = document.createElement("a");
+                        a.href = "/Estudiantes/Editar/" + estudiante[i].idEstudiante;
+                        a.textContent = "Editar";
+                        td.appendChild(a);
+                        tr.appendChild(td);
+
+                        //eliminar
+                        td = document.createElement("td");
+                        a = document.createElement("a");
+                        a.href = "javascript:eliminar(" + estudiante[i].idEstudiante + ")";
+                        a.textContent = "Eliminar";
+                        td.appendChild(a);
+                        tr.appendChild(td);
+
+                    }
+
+                })
+                .catch(error => {
+
+                    alert("Error en la peticion contacte al administrador");
+                    console.log('error', error);
+
+                });
+        }
+
+        function eliminar(idEstudiante) {
+            //console.log(idEmpleado);
+            //return 
+            let eliminar = confirm("Seguro que desea eliminar el empleado?");
+
+            if (eliminar) {
+
+                var requestOptions = {
+                    method: 'DELETE',
+                    redirect: 'follow'
+                };
+
+                var url = "https://localhost:5003/Estudiantes/" + idEstudiante;
+                console.log(url);
+
+                fetch(url, requestOptions)
+                    .then(response => response.text())
+                    .then(result => {
+                        console.log(result);
+                        console.log("Empleado eliminado correctamente");
+                        
+
+                        tabla.removeChild(tbody);
+                        
+                        tbody = document.createElement("tbody");
+
+                        tabla.appendChild(tbody);
+
+                        cargarListado();
+
+
+                    })
+                    .catch(error => {
+                        console.log('error', error)
+                        alert("Hubo un error al eliminar, contacte al administrador");
+                    });
+
+            } else {
+                    return;
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
